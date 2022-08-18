@@ -149,3 +149,58 @@ Def - tells we're getting ready to define a function
 <parameter> - parameters = placeholder, variable waiting to be filled with something
 
 If name function same as built-in, can no longer use built-in function
+
+For Loops
+Only good if we know (1) exactly how many times we want to loop and (2) have a collection to loop over
+
+Fork a repo
+copying the current state of the repository to your own copy on GitLab; how open software works
+
+For now, don't def functions inside for loop
+
+Functions help manage complexity
+
+Operators are left-right associative, but assignment is right-left associative (will first look at right side)
+
+Call stack - every time you call a function, it gets a new frame on the call stack
+Stack frame
+
+Import
+# .py not needed ... import rectangle creates an object, and everything in that object can be accessed with dot operator
+
+__init__.py
+# dunder file
+# required for python to know this folder contains modules ("package", "library")
+"Dunder init ... it's going to import the module from it"
+Built a library of code to use with shapes
+
+QUESTION - is shapes.rectangle equivalent to dot operator? -- # dot operator = accessing an object (module) within an object (dir)
+QUESTION - is there a way to only import one function from a module when importing using the directory.module syntax? -- rename ("as ___")
+
+Pylance is an extension for Visual Studio Code. More specifically, Pylance is a Python language server — this means it offers enhancements to IntelliSense, syntax highlighting, package import resolution, and a myriad of other features for an improved development experience in the Python language (tells you when you don't use what you've imported)
+
+# could do sys.path.append(), but that's bad practice ... add one if you don't have it in that path ANOTHER way (will be covered later)
+# cmd on mac or alt on pc and hover-click on function from module to see its code
+
+$ doc string = """ asdlksaj """ -- documentation string for this function when FIRST line of function (i.e. what does this function do), then, in VS code, if you hover over the called functions, you see the documentation
+""" Used for multiline string, too 
+
+
+VE
+Python virtual environments only change sys.path
+Root project = parent directory for that project
+Do VE in root
+Python -m venv <directory name> (-m means module) - runs like cmd line program, give name of directory you want to store your VE in
+
+source ./.venv/bin/activate
+Deactivate
+Pip install ___
+Pip list - shows packages installed within VE
+Pip freeze - lists all packages with version -- want to save this into file called requirements
+Pip freeze > requirements.txt
+Pip install --help 
+
+Docs
+Because int is the class of the value currently stored in the variable, i.e. 785 is a whole number.
+Because a value of class str, or string, is now stored in number.
+In py, enter help() or help > for (for help on for loop); type q to exit
