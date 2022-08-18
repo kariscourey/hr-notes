@@ -1,0 +1,22 @@
+Add/commit
+Arrange files: git add super-hero-one
+Take snapshot of repo (w message): git commit -m "Add two people to snapshot."
+
+Remote repo
+Git can store on remote computer
+
+Git history
+Can see what changes were made for each snapshot
+Git = program that is run on a computer, command-line application that appears in the terminal
+GitLab/GitHub are cloud-hosted services, remote repositories others can access, tools
+Can rollback to previous version of code base, if needed
+
+Version control system
+Keeps track of changes on computer for a given directory
+
+Can access git remotely (from anywhere) there is internet access
+When using git service (GitHub/GitLab)
+
+New commands
+git add <file name>
+git commit -m "add two superheroes to snapshot" (where m = message)

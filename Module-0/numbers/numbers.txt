@@ -1,0 +1,1 @@
+rational, integer, non-integer, irrational

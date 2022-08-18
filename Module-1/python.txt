@@ -1,0 +1,151 @@
+EXPLORE
+
+Intro
+Python - imperative language; you explicitly tell the computer what to do
+HTML, CSS - declarative languages; declare what you want (like a p tag), and the web browser figures it out
+
+Python to start py interpreter
+exit() to exit py interpreter
+
+Strings
+Double or single; double is convention
+Can use Len
+
+Six commonalities of modern programming languages (e.g. Python, JS< C++, Java, LOLCODE)
+- store value in variable
+- change value of variable
+- tell comp to do stuff
+- tell comp to do something if true
+- use dot (.) to tell objects to do stuff
+- how to do same thing repeatedly
+
+Variables
+BOXES that hold one value (even a list) at a time
+Are programming language's memory
+Set variable to a value / assign value to a variable
+Can't use variable that doesn't exist
+Only use uppercase
+Use underscores instead of spaces
+Case sensitive
+
+Functions
+Tell computer to do stuff via invoking/calling a function
+Need name, values to send to function, and parentheses
+Have return values (after function/job is complete
+Answer = int("34") ... where int("34") returns int 34 and is then stored in variable answer
+Take arguments, return return values
+
+Objects
+Object attributes represented by a dot
+A dot can tell the object to do stuff
+Functions used after dots are called "methods" (e.g. append method)
+
+Loops
+Nested for loops (put candy in bucket 3 times for kid in kids)
+
+Arguments
+Values given to a function (passed into a function)
+
+Conditionals
+False
+Empty string
+0 integer
+If ____:
+Elif ____:
+Else:
+Can have many Elifs or no Elifs NOR else clauses
+
+Lists
+Contain zero or more values
+Are one thing, so you can assign them to variables because variables can hold one thing
+Are ordered
+Are objects (unlike integers and strings) ... it can DO things, like get bigger (append)
+Can use Len
+Type of collection
+Crash comp by increasing size of list forever on loop
+Don't modify a list as you're looping over it
+
+CLASS
+
+QUESTIONS 
+why thonny?
+If True??
+
+TO DO
+Reorganize folders!!
+
+If want to use both quotations, need to escape with a /
+Python instance
+Ctrl L to clear during python instance/python terminal; clear when in general terminal
+
+"IDE" - integrated development environment
+
+Input method - let's computer pause and take input from user; ALWAYS returned as string without typecasting ... all values must be concetanated as a string .. if using comma, does not need to be string
+
+__pycache__/ = python is converted into byte code and then compiled ... want git to ignore it because will change every time you compile ... make a file called .gitignore - put file names (e.g. __pycache__) in the file
+SyntaxError - file can't compile
+
+ASCII - American Standard Code for Information Interchange... 8-bit ... used originally because murica... needed more character sets THUS
+Unicode - all characters for every possible language, including emojis, etc.; backwards compatible with ASCII (ASCII codes are in Unicode) ... 64-bit = can store way more characters
+Can write up an emoji, send it in with a proposal, paperwork, unicode committee, etc.
+
+## Tuple ##
+# another kind of list in python
+# list is mutable, tuple is immutable -- mutable = changeable
+# tuples are immutable lists
+# use paranthese instead of square brackets
+
+Django
+Framework that ties py, html, css together to make dynamic, data-driven websites
+
+Docs
+Signature
+Parameters
+Return
+Function's signature - shows name of function and all different args that can go into it... placeholders are called function parameters ... args when function is called, parameters when reading about the function
+Parameters - in square brackets = optional, if not included - "prompt is written to standard output"
+, return
+Presence of >>> implies to do using Python interpreter (in terminal)
+Int -- Base=10 means base has a default value of 10, int("10",base=2) or int() works ... 10 = unnamed parameter (has no name) and 2 is named parameter (because it has name base) ... means you want to convert "10" as if it were the binary representation of a number
+Print -- *objects = will take zero to however many you want number of arguments, params = sep, end, file (standard is sys.stdout=terminal), flush (print things in chunks or immediately); has no return value
+
+Functions
+Def, space, name of func, (parameter list): lines of code when function is invoked
+# code organization; refactoring - organizing into functions without changing what the program is running
+To refactor - start from bottom and move backwards, look at what variables are USED (parameter) and CREATED
+Variables inside a function are only alive INSIDE the function (when called, too!)
+* = splat, not asterisk -- any number of unnamed args
+** = double splat... something to do with dictionaries??
+
+Modules
+Module = code in other places = cp;;section of code you can use if you import it
+Import ____, from dir import ____ ... ___ = module
+datetime contains functions to work with dates, times, and date/times
+pprint to print lists and dictionaries in a pretty way rather than the normal way that print does it
+os to get information about the operating system
+sys to get information about the computer system and the Python version
+Modules contain code (functions, etc)
+
+Virtual environment
+Package - collection of modules you can install from PyPi; to do that, use the Package Installer for Python (aka pip)
+Pip comes with python - official installer for py packages
+Pip install package_name
+Want to install only in virtual environments 
+python -m venv ./.venv -- creates VE in local subdirectory named .venv (add the . So it's hidden by convention... not necessary)
+python -m venv ./burrito - could type this
+VE for each project 
+Must activate VE 
+source ./.venv/bin/activate to activate VE ... virtual environment is activated when you see "(.venv)" in front of your terminal prompt
+deactivate -- to deactivate VE
+
+CLASS NOTES
+
+Functions
+7 parts
+Def - tells we're getting ready to define a function
+<space> - required after def, so py interpreter knows
+<function_name> - name of function, want it to be readable
+( - represents start of parameter list
+<parameter> - parameters = placeholder, variable waiting to be filled with something
+
+If name function same as built-in, can no longer use built-in function

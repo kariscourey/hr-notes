@@ -1,0 +1,2 @@
+Arithmetic - common difference, initial value
+Geometric - common ratio, initial value
