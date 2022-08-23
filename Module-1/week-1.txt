@@ -204,3 +204,139 @@ Docs
 Because int is the class of the value currently stored in the variable, i.e. 785 is a whole number.
 Because a value of class str, or string, is now stored in number.
 In py, enter help() or help > for (for help on for loop); type q to exit
+
+Dictionaries
+Data types = simple (primitive) OR complex (structured)
+SImple = int, str, bool, None
+Dict = key-value pairs
+Dictionaries have "entries" or "key-value pairs"
+Unlike a list, the order of those keys coming out of the dictionary is not guaranteed to be the same every time. You cannot rely on it.
+If you need order in your sequence, you have to use a list.
+Lists and dicts = data structures
+
+Logical expressions
+Comparison operators - >, <, >=, <=, !=, ==; evaluate the value of operands on either side of the operator
+
+Identity operators 
+Is is not
+Check whether operands are identical (when values are stored in exact same memory location -- best practice to use with variables) - is, is not
+To compare None, must use "is"
+Variables = names that contain where a value is stored in memory; can check location of value with built-in id() function
+Variables created that are equated to same number? Point to same location memory! ****
+Same lists, tuples do NOT same memory location
+
+Logical operators
+And or not
+
+a	b	a and b	a or b	not a
+False	False	False	False	True
+False	True	False	True	True
+True	False	False	True	False
+True	False	False	True	False
+
+Truthy: Expressions evaluated as Truth
+Falsey: Expressions evaluated as False
+
+bool(0) == False
+bool(None) == false
+bool([]) == false
+
+Functions, revisited
+Functions make our code more readable, maintainable 
+Organizing is called refactoring
+
+Scope
+Region of code where we can use a variable
+Don't have to allocate memory for variables first
+Global - Variables defined outside a function
+
+Global scope
+Want to write functions that are reusable as possible
+
+Local scope
+"Age variable is local to verify_age function"
+Variable passed as an argument gets stored in the function parameter ... value is stored in the age parameter
+
+There was some discussion about the is operator last night and how sometimes it shows things like strings and tuples as having the same location in memory, and sometimes they don't.   This has to do with something the python compiler does called "interning".   It's an optimization to make your python programs use less memory.  Usually people mention it when talking about strings... here's an explanation  https://medium.com/techtofreedom/string-interning-in-python-a-hidden-gem-that-makes-your-code-faster-9be71c7a5f3e   But it also happens with anything in python that is IMMUTABLE.  Also, when running in pdb (the python debugger) they will never have the same memory location, because in the debugger INTERNING doesn't happen. This also applies to Thonny when stepping through code a line at a time (it's using the same mechanisms as pdb under the hood)
+MediumMedium
+String Interning in Python: A Hidden Gem That Makes Your Code Faster
+Level up the speed of string comparisons
+Reading time
+5 min read
+May 15th, 2021 (160 kB)
+https://medium.com/techtofreedom/string-interning-in-python-a-hidden-gem-that-makes-your-code-faster-9be71c7a5f3e
+
+9:31
+BTW, the TL;DR of this is... Try not to write code that uses the is operator, especially when comparing strings or tuples.
+
+Conditionals
+Words to watch out for: if then, when, only, otherwise, except
+Elif only checks if first condition is false
+Else not required nor "best practice" 
+
+CLASS
+For and while
+For = known number of times
+While - unknown number of times
+Word indicators - every, each, for, all
+List and collections (known interaction count) word indicators - find, sort, transform/map (double all numbers in the list ... best practice to return new list), filter (only small numbers ... always returns new list because of diff length) --- find only ever returns ONE thing (often the first), filter returns a collection of things
+Unknown iteration count word indicators - until, while, "count number of times ____ in list"
+Mapping = transforming data
+# reduce -- loop through a list and reduce it down to a single value (e.g. count)
+# turn object into something you can see by passing it into the tuple or list constructor
+# unpacking - taking a list and other side of =, putting ",,," ... number of values to unpack must be the same
+QUESTION -- unpacking??
+QUESTION -- transforming, mapping??
+
+Dictionaries
+# unordered collection of key-value pairs (but python updated that and now the order matters)
+# can create empty dict with {}
+# {'key': value} is a "dictionary literal"
+# .get() for key that doesn't exist returns None .. won't crash, so a lil safer
+# dict['key'] for key that doesn't exist RAISES a KeyError
+# Can loop through a list with for; By default, this gives keys
+# This is like enumerate but for dicts, gives keys and values
+print(me.items())
+Dict - both key and value? .items()
+
+Need to fork repos so you have a copy on your own account (fork on the remote server)... like the equivalent of clone just within the remote server, though
+
+
+FORK, VE, PIP
+Click that "Fork project" button!
+
+clone your fork of the the Python Practice Problems repository. Once you get it cloned, do the normal stuff.
+
+Change your working directory to the python-practice-problems directory
+
+Add the original repo as upstream git remote add upstream https://gitlab.com/sjp19-public-resources/python-practice-problems
+
+Create your virtual environment for that directory
+
+python -m venv .venv
+Activate your virtual environment
+
+Upgrade pip with
+
+python -m pip install --upgrade pip
+Install the requirements
+
+pip install -r requirements.txt
+Create a work branch (and check it out), first-pass is the branch name
+
+git checkout -b first-pass (creates new branch)
+Git checkout first-pass (or main ... navigates to different branch)
+Git branch to see all local branches
+Git branch -r to see all remote branches
+
+Spend time each day to work on practice problems
+
+
+Identifying functions
+Functions do things - calculate a thing, get some data
+Query db 
+Return data as native python data to make it processable by python
+Len method
+
+Objects and classes
+Object oriented programming - style of programming the py supports

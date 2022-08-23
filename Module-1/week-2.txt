@@ -1,0 +1,266 @@
+EXPLORATION
+
+Pseudocode
+To do list
+
+function filter_list(source_list, comparison)
+    create a new list
+
+    copy each value from source_list to the new list
+    if the value is more than comparison
+
+    return the new list
+
+One line of pseudocode:one line of code == 1:1
+
+function filter_list(source_list, comparison)
+    create a new list
+
+    for each item in the list
+        if the item is more than the comparison value
+            copy it to the new list
+
+    return the new list
+
+function filter_list(source_list, comparison)
+    filtered_list = a new list
+
+    for each item in the list
+        if the item is more than the comparison value
+            add the item to filtered_list
+
+    return filtered_list
+
+Lists, dicts, classes = data structures
+Anything more complex than number or a string is a data struct
+Algorithm - any list of instructions you tell the comp to do; every function you write is an algorithm 
+
+Classes and objects
+Solve problem of discrete values and problem of locality
+Turn data into something our software can use 
+State of idea = Different pieces of data to describe the idea
+Behavior = ways to interact with the data; change based on other info on the receipt (like total, subtotal)
+Car - state = your car, number of miles, last maintenance
+
+Object-oriented design - state and behavior
+Class - defines state and behavior
+Instances - created from classes, can actually interact with; "OBJECTS"
+Class = blueprint to create INSTANCES which are OBJECTS
+Declare/define a class
+
+Class is a blueprint - use it to create instances (objects) of the class that'll have their own behavior
+
+Initializer method (__init__) - Gets required state 
+# self = param python provides automatically in every method of a class; holds the first instance of the class
+# using name of class on RHS calls __init__ method of class
+
+Inside the __init__ method, for every instance that the EquilateralShape class initializes, it takes the value of the num_sides parameter and sets it as a property on that instance named num_sides.
+self.num_sides = num_sides
+
+State = part of __init__ (parameters)
+Behavior = additional functions
+
+Classes - keep the state and behavior of an instance of a class together
+Base class, super class or parent class is the class that another class inherits from.
+Specialized class, subclass, or child class is the class that is inheriting from another class.
+"the subclass is a type of parent class".
+
+There are generally two ways to identify when to use inheritance:
+
+When you write a class that has a long if-elif-else chain that's based on a single piece of the state
+When two classes that you wrote are the same kind of thing and have a lot of the same code
+
+
+CLASSES
+Blueprint 
+Requirements to code, when to use class
+Requirements: look for central concepts (nouns) which have behavior (verbs)
+Bank account (noun) that can SHOW MY BALANCE (verb)
+I want to be able to create an INVOICE that shows the ITEMS PURCHASED and computes!! the sub-total, taxes, and invoice total
+Class methods -- methods called on the class itself
+Classes - collections of state and behavior
+
+
+# Methods
+Class InvoiceItem:
+    # get_total()
+
+Class Invoice:
+    # add_item(item)
+    # get_subtotal()
+    # get_tax()
+    # get_total()
+
+"I want to be able to have different bank accounts, savings accounts, and checking accounts, and check my balance"
+Class CheckingAccount:
+Def __init__(self, balance):
+	self.balance = balance
+Def get_balance(self):
+	return self.balance
+
+Class SavingsAccount:
+Def __init__(self, balance):
+	self.balance = balance
+Def get_balance(self):
+	return self.balance
+
+Python class names are always capitalized
+
+# double underscores = dunder, "dunder init"
+Dunder init - initializes the initial state we want our class to have... want class to be aware of what our arguments are
+Method - function that is inside a class
+Self = represents a particular instance using the class ... brand new empty object (instance/copy of class) = self that you can assign attributes to
+We don't call init, python calls it... we call the class
+All methods need to have "self"
+# use self when accessing variables outside of current function in class
+"Self is always the instance of the class"
+Under init - customize object that gets created when you create the instance of that class (e.g. add attributes ... we need a place in our invoice to store the tax rate)
+Dunder init is called every time class is invoked
+__dict__ = # takes instance of bank account and converts to dictionary
+
+Inheritance: Reuse bank account class without having to copy; inherits all behavior and state from parent class
+Use super() to access init of super class
+Super = parent, sub = child
+Super() returns reference to super calss
+Type() on an instance will return class name
+
+Multiple inheritance
+Only use when very simple; avoid because it makes it complicated
+UML diagram
+# prints "class ...SavingsAccount because SA inherits from statement -- self will always be the thing to the left of the dot"
+
+ # don't need dunder init because we already have access to self from Animal class; linked via passing Animal as a param for Dog class
+# super() to extend something from parent class to child class
+# Dog has access to describe AND init from Animal
+
+super() -- # if you wanted to control which args pass through to this class
+# super() also used for multiple inheritance
+
+Static attributes - parameters outside of methods
+
+
+HTML CSS
+
+Exploration
+⌘ (Cmd) + Shift + C to explore webpage
+On MacOS, press Option + ⌘ (Cmd) + J to close dev tools
+Rendered version - output of HTML source code and CSS, webpage
+HTML source code - tells browser to show content of document
+
+HTML - text format; don't need a particular type of software to write
+Tags - <body> </body> .... / = close tag
+Non-empty tags - can be something between them
+MUST have a close gar for an open tag (case doesn't matter with tags) ... modern convention - all lowercase
+
+Parent and child tags; child is inside parent; parent contains child; child is nested inside head
+
+<html> contain entire doc
+<head> and <body> are its children
+HTML spacing and lines don't matter
+
+Tags have 3 parts - open tag, content, and close tag
+Tags are the markup in HyperText Markup Language; inform browser about type of content in tag
+
+HTML - is a markup language, is text, describes structure of page, includes content of page
+
+<!doctype html> ## not a tag!! preamble
+<html>
+  <head>
+    <title>Nicely-Formed HTML</title>
+  </head>
+  <body>
+    <p>Some content for the page</p>
+  </body>
+</html>
+
+Doctype = document type -- tells browser this is an HTML 5 document!; preamble
+
+Html open tag, contains ALL html for browser
+
+Head - info about document
+
+No tags allowed in title tag
+
+Body - shown on web browser itself
+
+Main - principal area of webpage
+
+Header - logos, navigation, log in buttons, etc.
+
+Footer - addresses, socials, etc.
+
+Nav - contains nav links, usually
+
+Div - divides into arbitrary sub regions
+
+H1, h2, h3, p - provide structure to the content; we can interpret the type of content as heading/paragraph/etc.
+
+H1 - only ONE by modern convention
+
+H4-6 - don't use them
+
+A - anchor tag; creates clickable link to another web page
+
+CSS
+Stylesheet - colors, borders, fonts
+CSS rule - applies specific combo of colors, borders, fonts, shadows, layout to tags... has 4 parts: CSS selector, { a list of properties and their values )
+Tag selectors - select tags (like h1 or p)
+Class selectors -  USES dot - . -more control (like .has-purple-background)
+Tag selector - #tag
+**Use dashes to separate words
+<p class="has-thick-orange-border has-green-background">
+Classes are case sensitive
+Html classes are space-delimited
+Convention: use lower case
+To define border widths, use "1px" not "1 px"
+ <link rel="stylesheet" href="hackreactor.css">
+A CSS rule has a selector, a curly brace, a list of properties and values, and a close curly brace
+A tag selector is just the name of the tag
+A class selector is the dot . followed by a name, which you then add to the class="..." list on the tags you want the rule to apply to
+The properties that we know right now are border, color, and background-color
+Colors can be names or "hex values"
+
+Layout
+Set of rules to position tags
+Block, inline, and grid layouts
+
+Block layout
+All tags have block layout except a
+i.e. browser tries to create a rectangle - a block - that contains that tag's contents
+Has margin
+Start on a "new line", if needed
+Determine the maximum width that the tag can have
+Start writing the tag's content using that width, wrapping lines when it reaches the edge
+Once all text is written inside, make a "block" that contains only that content
+Apply any CSS rules for that tag and its classes
+Start the next tag on a "new line"
+
+Inline layout
+"a" tag is the only one with inline layout
+Just enough space to write content
+Make a mark where text is currently printing as the start of the inline layout
+Print the text that is the content of the tag
+At the end of the content, make a mark as the end of the inline layout
+Apply all CSS rules for that tag and its classes from the start of the layout to the end of the layout
+Keep printing the next stuff where the inline layout ended
+
+.inline-layout {
+  display: inline;
+}
+
+.block-layout {
+  display: block;
+}
+
+Grid layout
+Makes rectangles in a grid with columns and rows, then puts child tags inside those rectangles
+
+.two-by-two-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+
+Head - inför about html document
+Header - contains logos and shit
+Applies a single specific style to selected HTML elements. Ex: h1 { color: red; }
